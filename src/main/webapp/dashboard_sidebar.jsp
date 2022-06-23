@@ -16,18 +16,21 @@
 		role=new UserRole().getRole((String)session.getAttribute("email"),(String)session.getAttribute("username"))[0];
 		user=new UserRole().getRole((String)session.getAttribute("email"),(String)session.getAttribute("username"))[1];
 %>
+
 <style>
+
 [class*=sidebar-dark] .brand-link {
     border-bottom: none;
 }
 </style>
+<script src="https://your-site-or-cdn.com/fontawesome/v6.1.1/js/all.js" ></script>
 
   <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4 position-fixed">
       <!-- Brand Logo -->
       <a href="<%=request.getContextPath()%>/login" class="brand-link">
-        <img src="Assets/dist/img/Sidebar_logo.png"  alt="DigiXam" class="brand-image" style="max-height: 53px;" > <!-- class="brand-image img-circle elevation-3" style="opacity: .8" -->
-        <span class="brand-text text-light" style="font-size:120%">DigiXam</span>
+        <img src="Assets/dist/img/Sidebar_logo.png"  alt="DigiXam" class="brand-image" style="max-height: 53px; margin-left: 0px; margin-right: 0px; padding-left: 7px;" > <!-- class="brand-image img-circle elevation-3" style="opacity: .8" -->
+        <span class="brand-text text-light" style="font-size:130%;">DigiXam</span>
       </a>
   
       <!-- Sidebar -->
@@ -48,17 +51,29 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
-            
+            <%if(role.equals("student")) {%>
             <li class="nav-item ">
               <a href="<%=request.getContextPath()%>/home" class="nav-link text-light">
-                <i class="nav-icon  fas fa-th "></i>
+                <i class="nav-icon fa-solid fa-house-user"></i>
                 <p>
                   Dashboard
                 </p>
               </a>
             </li>
-            <%if(role.equals("student")) {%>
-             <div class="datetime">
+            
+             <div class="datetime" style="color: white; padding-left: 10px; font-size:130%;">
+ 
+             <!-- Digital Clock -->
+             <!--<time>
+				<div class="clock">
+				<div class="dial-container dial-container--hh js-clock" data-cur="9" data-start="0" data-end="12" data-dur="hh"></div> &nbsp;
+				<div class="dial-container dial-container--mm js-clock" data-cur="2" data-start="0" data-end="5" data-dur="mm"></div><div class="dial-container dial-container--m js-clock" data-cur="3" data-start="0" data-end="9" data-dur="m"></div>  
+				   &nbsp;
+				<div class="dial-container dial-container--ss js-clock" data-cur="4" data-start="0" data-end="5" data-dur="ss"></div><div class="dial-container dial-container--s js-clock" data-cur="8" data-start="0" data-end="9" data-dur="s"></div>
+				  </div>
+			 </time>
+			  -->	
+			  
 		      <div class="date">
 		        <span id="dayname">Day</span>,
 		        <span id="month">Month</span>
@@ -76,7 +91,8 @@
             <%if(role.equals("super-admin")) {%>
             <li class="nav-item">
               <a href="<%=request.getContextPath()%>/admin" class="nav-link text-light">
-                <i class="nav-icon fas fa-user"></i>
+                <!--<i class="nav-icon fa-solid fa-screen-users"></i>">-->
+                <i class="nav-icon fa-solid fa-building-columns"></i>
                 <p>
                   Admins
                 </p>
@@ -86,9 +102,10 @@
             <%if(role.equals("super-admin") || role.equals("admin")) {%>
             <li class="nav-item">
               <a href="<%=request.getContextPath()%>/user" class="nav-link text-light">
-                <i class="nav-icon fas fa-user"></i>
+                <!-- <i class="nav-icon fas fa-user"></i> -->
+                <i class="nav-icon fa-solid fa-chalkboard-user"></i>
                 <p>
-                  Teacher
+                  Teachers
                 </p>
               </a>
             </li>
@@ -96,34 +113,35 @@
             <%if(!role.equals("student")) {%>
              <li class="nav-item">
               <a href="<%=request.getContextPath()%>/student" class="nav-link text-light">
-                <i class="nav-icon fas fa-user"></i>
+                <!--<i class="fa-solid fa-screen-users"></i>-->
+                <i class="nav-icon fa-solid fa-graduation-cap"></i>
                 <p>
-                  Student
+                  Students
                 </p>
               </a>
             </li>
              <%if(role.equals("super-admin") || role.equals("admin")) {%>
             <li class="nav-item">
               <a href="<%=request.getContextPath()%>/department" class="nav-link text-light">
-                <i class="nav-icon fas fa-user"></i>
+                <i class="nav-icon fa-solid fa-users-viewfinder"></i>
                 <p>
-                  Department
+                  Departments
                 </p>
               </a>
             </li>
             <%} %>
             <li class="nav-item">
               <a href="<%=request.getContextPath()%>/subject" class="nav-link text-light">
-                <i class="nav-icon fas fa-user"></i>
+               <i class="nav-icon fa-solid fa-book-open"></i>
                 <p>
-                  Subject
+                  Subjects
                 </p>
               </a>
             </li>
              <%if(role.equals("super-admin") || role.equals("admin")) {%>
             <li class="nav-item">
               <a href="<%=request.getContextPath()%>/assign" class="nav-link text-light">
-                <i class="nav-icon fas fa-user"></i>
+                <i class="nav-icon fa-solid fa-person-chalkboard"></i>
                 <p>
                   Subject Assigned
                 </p>
@@ -132,7 +150,7 @@
             <%} %>
             <li class="nav-item">
               <a href="<%=request.getContextPath()%>/examination" class="nav-link text-light">
-                <i class="nav-icon fa fa-graduation-cap"></i>
+                <i class="nav-icon fa-solid fa-file-circle-question"></i>
                 <p>
                   Examination
                 </p>
@@ -140,7 +158,7 @@
             </li>
              <li class="nav-item">
               <a href="<%=request.getContextPath()%>/answers" class="nav-link text-light">
-                <i class="nav-icon fa fa-graduation-cap"></i>
+                <i class="nav-icon fa-regular fa-pen-to-square"></i>
                 <p>
                   Answers
                 </p>
@@ -148,7 +166,7 @@
             </li>
             <li class="nav-item">
               <a href="<%=request.getContextPath()%>/result" class="nav-link text-light">
-                <i class="nav-icon fa fa-graduation-cap"></i>
+                <i class="nav-icon fa-solid fa-ranking-star"></i>
                 <p>
                   Result
                 </p>

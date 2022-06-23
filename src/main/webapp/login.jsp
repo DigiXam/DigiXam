@@ -177,7 +177,8 @@ form.sign-in-form {
 
 .panel .content {
   color: #fff;
-  margin-left:144px;/*ll*/
+  margin-left: 71px;
+  margin-right: 68px;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }

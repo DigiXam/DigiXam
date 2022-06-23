@@ -42,9 +42,10 @@ public class PDFtoJPEG {
 					outputfile = new File(destinationDir + File.separatorChar + fileName + "_" + pageNumber + ".png");
 					System.out.println("Image Created -> " + outputfile.getName());
 
-					SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyyy");
+					//SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyyy");
 
-					s[i] = sdf.format(new Date()) + "_" + outputfile.getName();
+					//s[i] = sdf.format(new Date()) + "_" + outputfile.getName();
+					s[i] = outputfile.getName();
 					ImageIO.write(image, "png", outputfile);
 					i++;
 					pageNumber++;

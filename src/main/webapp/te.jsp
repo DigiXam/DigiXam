@@ -141,7 +141,7 @@
 							%>
 							<!-- /.department -->
 							
-							<!-- class -->
+							<!-- class
 							    <div class="form-group row">
 					                  <label for="staticEmail" class="col-sm-2 col-form-label">Class</label>
 					                  <div class="col-sm-10">
@@ -154,10 +154,9 @@
 					                      </select>		
 				                  </div>
 				                  </div>
-							<!-- ./class -->
+							./class -->
 					 <%} %>
-					 <input type="file" name="profile">
-					 <a href="<%=request.getContextPath()%>/RemoveImageController?id=<%=id%>" class="btn">remove</a>  
+					 <input type="file" name="profile">  
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

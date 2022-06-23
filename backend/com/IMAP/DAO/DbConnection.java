@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DbConnection {
 	private String url = "jdbc:mysql://localhost:3306/digixam";
 	private String user = "root";
-	private String password = "10339";
+	private String password = "SQLPassword";
 
 	public Connection getConnection() throws SQLException {
 		try {

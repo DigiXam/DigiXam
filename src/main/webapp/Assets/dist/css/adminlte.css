@@ -12453,7 +12453,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   display: block;
   font-size: 1.25rem;
   line-height: 1.5;
-  padding: 0.8125rem 0.5rem;
+  padding: 1.8125rem 0.5rem;
   transition: width 0.3s ease-in-out;
   white-space: nowrap;
 }

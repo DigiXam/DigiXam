@@ -81,11 +81,11 @@ nav .profile-details li .admin_name{
         </li>
        
       </ul >
-		<ul class="navbar-nav ml-2">
+		<!-- <ul class="navbar-nav ml-2">
 			<li id="timer1" class="nav-item">
 			00:00
 			</li>
-		</ul>
+		</ul> -->
      <ul class="navbar-nav ml-auto profile-details ">
       <li class="nav-item dropdown mb-2">
       	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
