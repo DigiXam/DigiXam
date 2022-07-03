@@ -61,20 +61,8 @@
               </a>
             </li>
             
-             <div class="datetime" style="color: white; padding-left: 10px; font-size:130%;">
- 
-             <!-- Digital Clock -->
-             <!--<time>
-				<div class="clock">
-				<div class="dial-container dial-container--hh js-clock" data-cur="9" data-start="0" data-end="12" data-dur="hh"></div> &nbsp;
-				<div class="dial-container dial-container--mm js-clock" data-cur="2" data-start="0" data-end="5" data-dur="mm"></div><div class="dial-container dial-container--m js-clock" data-cur="3" data-start="0" data-end="9" data-dur="m"></div>  
-				   &nbsp;
-				<div class="dial-container dial-container--ss js-clock" data-cur="4" data-start="0" data-end="5" data-dur="ss"></div><div class="dial-container dial-container--s js-clock" data-cur="8" data-start="0" data-end="9" data-dur="s"></div>
-				  </div>
-			 </time>
-			  -->	
-			  
-		      <div class="date">
+             <div class="datetime" id="datetime" style="color: white; padding-left: 10px; font-size:130%;">			  
+		      <div class="date"> 
 		        <span id="dayname">Day</span>,
 		        <span id="month">Month</span>
 		        <span id="daynum">00</span>,

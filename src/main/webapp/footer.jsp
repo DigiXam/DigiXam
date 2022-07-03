@@ -7,7 +7,7 @@
 <script src="Assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
+<!-- DataTables & Plugins -->
 <script src="Assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="Assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="Assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -30,7 +30,14 @@
 <script type="text/javascript" >
 $(function () {
 	
-
+$("#bars").click(function(){
+	if($('body').hasClass('sidebar-collapse')){
+		$("#datetime").show();
+	}
+	else {
+		$("#datetime").hide();
+	} 
+});
 
 	$( "#timer" ).click(function() {
 		

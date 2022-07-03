@@ -74,7 +74,7 @@ nav .profile-details li .admin_name{
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+          <a class="nav-link" id="bars" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <h4 class="mt-1"><%=request.getRequestURI().split("/")[request.getRequestURI().split("/").length-1].substring(0, 1).toUpperCase()+request.getRequestURI().split("/")[request.getRequestURI().split("/").length-1].substring(1)%></h4>
